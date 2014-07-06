@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>NmapIO</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <script src="https://cdn.socket.io/socket.io-1.0.4.js"></script>
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="bower_components/bootflat/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootflat/css/bootflat.css">
+        <link rel="stylesheet" href="bower_components/bootflat/css/bootflat-square.css">
+        <link rel="stylesheet" href="bower_components/bootflat/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Nmap.IO</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid nmap-cont">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="panel panel-http">
+                        <h5>Trafico http</h5>
+                        <div class="cont-info"></div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="panel panel-host">
+                        <h5>Host Consultados</h5>
+                        <div class="cont-info"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="panel panel-tcp">
+                        <h5>Trafico TCP</h5>
+                        <div class="cont-info"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="panel panel-paquetes">
+                        <h5>Trafico Paquetes</h5>
+                        <div class="cont-info"></div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="panel panel-ips">
+                        <h5>IP's Consultadas</h5>
+                        <div class="cont-info"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootflat/js/bootstrap.min.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+
+</body>
+</html>
