@@ -1,0 +1,33 @@
+{
+  "name": "Nmap-Web-Client",
+  "version": "0.1.0",
+  "description": "Packet, http, tcp analyzer using NodeJS, socket.io and node_pcap library from mranney.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goshmx/Nmap-Web-Client"
+  },
+  "keywords": [
+    "nmap",
+    "real",
+    "time",
+    "tcp",
+    "analyzer",
+    "http",
+    "packet"
+  ],
+  "author": "goshmx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goshmx/Nmap-Web-Client/issues"
+  },
+  "homepage": "https://github.com/goshmx/Nmap-Web-Client",
+  "dependencies": {
+    "pcap": "^1.2.0",
+    "socket.io": "^1.0.6"
+  }
+}
