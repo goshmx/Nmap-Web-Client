@@ -14,18 +14,29 @@
 /* Inicializacion de variables de entorno */
 var pcap = require("pcap");
 var util = require('util');
+var staticServer = require("node-static");
 var pcap_session = pcap.createSession("", "tcp");
 var dns_cache    = pcap.dns_cache;
 var tcp_tracker  = new pcap.TCP_tracker();
 var matcher = /safari/i;
-var app = require('http').createServer();
-var io = require('socket.io')(app);
+var http = require('http');
+var socketio = require('socket.io');
 var inspect = require('sys').inspect;
+var file = new staticServer.Server('../cliente/dist/');
 
 console.log("Escuchando interfaz: " + pcap_session.device_name);
 
+var app = http.createServer(function (request, response) {
+  request.addListener('end', function () {
+    file.serve(request, response);
+  }).resume();
+});
+
+io = socketio(app);
+
 /* Definido el puerto 7777 por default para la transmision. */
 app.listen(7777);
+console.log("Servidor http creado en el puerto 7777");
 
 /* Inicio de la comunicacion con socket.io */
 io.on('connection', function (socket) {
